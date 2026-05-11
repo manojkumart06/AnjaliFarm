@@ -31,7 +31,7 @@ export default function Loader() {
         >
           <div className="absolute left-0 right-0 top-1/2 mx-auto flex max-w-[1320px] -translate-y-1/2 justify-between px-8 text-[11px] uppercase tracking-[0.4em] text-mute">
             <span>Rural India</span>
-            <span>Est. 1962</span>
+            <span>Est. 1999</span>
           </div>
           <motion.div
             initial={{ opacity: 0, y: 14 }}

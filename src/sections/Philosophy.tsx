@@ -65,19 +65,12 @@ export default function Philosophy() {
           </Reveal>
 
           <Reveal delay={0.5}>
-            <div className="mt-16 flex items-center gap-5">
-              <div className="h-14 w-14 overflow-hidden rounded-full">
-                <img
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80"
-                  alt="Anjali Farms — farmer"
-                  className="h-full w-full object-cover grayscale"
-                />
-              </div>
+            <div className="mt-16 flex items-center gap-4 border-l border-bone/20 pl-5">
               <div>
                 <div className="font-serif text-lg italic-soft text-bone">
                   — From the family at Anjali Farms
                 </div>
-                <div className="text-[11px] uppercase tracking-[0.3em] text-bone/55">
+                <div className="mt-1 text-[11px] uppercase tracking-[0.3em] text-bone/55">
                   Three generations of farmers
                 </div>
               </div>

@@ -59,7 +59,9 @@ export default function VisitCTA() {
         <Reveal delay={0.5}>
           <div className="mt-14 flex flex-wrap items-center gap-4">
             <a
-              href="#visit"
+              href="https://maps.app.goo.gl/aXVpyNnf3tHL8iFz5"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 rounded-full bg-bone px-8 py-4 text-[13px] tracking-wide text-ink transition-all duration-500 ease-smooth hover:scale-[1.03]"
             >
               Plan Your Visit

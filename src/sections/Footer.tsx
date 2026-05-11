@@ -15,6 +15,12 @@ const COLUMNS = [
   },
 ];
 
+const EMAIL = 'manojkumar06t@gmail.com';
+const PHONE_DISPLAY = '+91 83101 47887';
+const PHONE_INTL = '918310147887'; // for wa.me / tel: links
+const MAP_URL = 'https://maps.app.goo.gl/aXVpyNnf3tHL8iFz5';
+const INSTAGRAM_URL = 'https://www.instagram.com/_manojgowda__/';
+
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-bone pt-28">
@@ -35,28 +41,36 @@ export default function Footer() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <form className="mt-10 flex max-w-md items-center overflow-hidden rounded-full border border-ink/15 bg-bone p-1.5 shadow-soft">
-                <input
-                  type="email"
-                  placeholder="Stay close to the farm — your email"
-                  className="flex-1 bg-transparent px-5 py-3 text-[13px] tracking-wide text-ink placeholder-mute/70 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="rounded-full bg-ink px-5 py-3 text-[12px] uppercase tracking-[0.25em] text-bone transition-all duration-500 ease-smooth hover:bg-sand-700"
+              <div className="mt-10">
+                <div className="text-[11px] uppercase tracking-[0.3em] text-mute">
+                  Write to us
+                </div>
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="mt-3 inline-flex items-center gap-3 font-serif text-[clamp(1.5rem,2.6vw,2.2rem)] leading-[1.1] tracking-tightest text-ink transition-colors duration-500 ease-smooth hover:text-sand-700"
                 >
-                  Subscribe
-                </button>
-              </form>
+                  {EMAIL}
+                  <span
+                    aria-hidden
+                    className="inline-block text-base transition-transform duration-500 ease-smooth group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </a>
+              </div>
             </Reveal>
 
-            <Reveal delay={0.25}>
+            <Reveal delay={0.3}>
               <div className="mt-10 space-y-1 text-[13px] leading-relaxed text-mute">
                 <div className="text-[11px] uppercase tracking-[0.3em] text-ink/80">
                   Reach us
                 </div>
-                <div className="mt-3">hello@anjalifarms.in</div>
-                <div>+91 98000 00000</div>
+                <a
+                  href={`tel:+${PHONE_INTL}`}
+                  className="mt-3 block text-ink transition-colors duration-500 ease-smooth hover:text-sand-700"
+                >
+                  {PHONE_DISPLAY}
+                </a>
               </div>
             </Reveal>
           </div>
@@ -92,21 +106,32 @@ export default function Footer() {
               </h4>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="mt-5 overflow-hidden rounded-[2px] shadow-soft">
+              <a
+                href={MAP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-5 block overflow-hidden rounded-[2px] shadow-soft"
+                aria-label="Open Anjali Farms in Google Maps"
+              >
                 <iframe
                   title="Anjali Farms map"
                   loading="lazy"
-                  className="h-44 w-full grayscale-[0.4]"
+                  tabIndex={-1}
+                  className="pointer-events-none h-44 w-full grayscale-[0.4] transition-all duration-700 ease-smooth group-hover:grayscale-0"
                   src="https://www.openstreetmap.org/export/embed.html?bbox=77.3%2C12.8%2C77.7%2C13.05&amp;layer=mapnik"
                 />
-              </div>
+              </a>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-4 text-[13px] leading-relaxed text-mute">
-                Anjali Farms,
-                <br /> A quiet village,
-                <br /> South India.
-              </p>
+              <a
+                href={MAP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 text-[13px] leading-relaxed text-mute transition-colors duration-500 ease-smooth hover:text-ink"
+              >
+                Open in Google Maps
+                <span aria-hidden className="inline-block">↗</span>
+              </a>
             </Reveal>
           </div>
         </div>
@@ -120,13 +145,20 @@ export default function Footer() {
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-ink/10 pb-10 pt-8 text-[11px] uppercase tracking-[0.3em] text-mute sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} Anjali Farms</span>
           <div className="flex items-center gap-6">
-            <a href="#" className="nav-underline">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-underline"
+            >
               Instagram
             </a>
-            <a href="#" className="nav-underline">
-              YouTube
-            </a>
-            <a href="#" className="nav-underline">
+            <a
+              href={`https://wa.me/${PHONE_INTL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-underline"
+            >
               WhatsApp
             </a>
             <a href="#" className="nav-underline">
