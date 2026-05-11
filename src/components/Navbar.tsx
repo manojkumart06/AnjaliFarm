@@ -30,7 +30,7 @@ export default function Navbar() {
       >
         <nav
           className={`relative flex w-full max-w-[1320px] items-center justify-between rounded-full px-4 py-3 transition-all duration-700 ease-smooth sm:px-6 ${
-            scrolled
+            scrolled || open
               ? 'glass shadow-soft'
               : 'bg-transparent'
           }`}
@@ -38,7 +38,7 @@ export default function Navbar() {
           <a
             href="#home"
             className={`font-serif text-2xl tracking-tightest transition-colors duration-500 ease-smooth sm:text-[28px] ${
-              scrolled
+              scrolled || open
                 ? 'text-ink'
                 : 'text-bone [text-shadow:0_1px_12px_rgba(0,0,0,0.35)]'
             }`}
@@ -48,7 +48,7 @@ export default function Navbar() {
 
           <ul
             className={`absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[13px] transition-colors duration-500 ease-smooth md:flex ${
-              scrolled
+              scrolled || open
                 ? 'text-ink/85'
                 : 'text-bone/95 [text-shadow:0_1px_10px_rgba(0,0,0,0.4)]'
             }`}
@@ -66,7 +66,7 @@ export default function Navbar() {
             <a
               href="#visit"
               className={`group hidden items-center gap-2 rounded-full px-5 py-2.5 text-[13px] tracking-wide transition-all duration-500 ease-smooth hover:scale-[1.03] md:inline-flex ${
-                scrolled
+                scrolled || open
                   ? 'bg-ink text-bone hover:bg-sand-700'
                   : 'bg-bone text-ink hover:bg-bone/90'
               }`}
@@ -87,17 +87,17 @@ export default function Navbar() {
               <span className="flex flex-col gap-1.5">
                 <span
                   className={`h-px w-5 transition-all duration-500 ${
-                    scrolled ? 'bg-ink' : 'bg-bone'
+                    scrolled || open ? 'bg-ink' : 'bg-bone'
                   } ${open ? 'translate-y-[6px] rotate-45' : ''}`}
                 />
                 <span
                   className={`h-px w-5 transition-all duration-300 ${
-                    scrolled ? 'bg-ink' : 'bg-bone'
+                    scrolled || open ? 'bg-ink' : 'bg-bone'
                   } ${open ? 'opacity-0' : 'opacity-100'}`}
                 />
                 <span
                   className={`h-px w-5 transition-all duration-500 ${
-                    scrolled ? 'bg-ink' : 'bg-bone'
+                    scrolled || open ? 'bg-ink' : 'bg-bone'
                   } ${open ? '-translate-y-[6px] -rotate-45' : ''}`}
                 />
               </span>
